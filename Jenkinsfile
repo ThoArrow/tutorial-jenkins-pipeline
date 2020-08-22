@@ -1,7 +1,7 @@
 pipeline {
   agent any
   environment {
-    FRONTEND_GIT = 'https://github.com/ThoArrow/tutorial-jenkins-pipeline.git'
+    FRONTEND_GIT = 'https://github.com/ThoArrow/tutorial-jenkins-frontend.git'
     FRONTEND_BRANCH = 'master'
     FRONTEND_IMAGE = 'thoarrown/tutorial-jenkins-frontend'
     FRONTEND_SERVER = '35.240.207.69'

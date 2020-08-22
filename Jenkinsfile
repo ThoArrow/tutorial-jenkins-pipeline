@@ -45,7 +45,7 @@ pipeline {
             def remote = [:]
             remote.name = 'server'
             remote.host = FRONTEND_SERVER
-            remote.user = user
+            remote.user = thoarrow
             remote.identityFile = identityFile
             remote.allowAnyHosts = true
 

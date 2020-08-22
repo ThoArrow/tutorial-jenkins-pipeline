@@ -26,7 +26,7 @@ pipeline {
       steps {
         unstash 'frontend'
         script {
-          docker.withRegistry('', 'docker-hub') {
+          docker.withRegistry('', 'dockerhub') {
             def image = docker.build(FRONTEND_IMAGE)
             image.push(BUILD_ID)
           }

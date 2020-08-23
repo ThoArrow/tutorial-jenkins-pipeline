@@ -5,7 +5,7 @@ pipeline {
     FRONTEND_BRANCH = 'master'
     FRONTEND_IMAGE = 'thoarrown/tutorial-jenkins-frontend'
     FRONTEND_SERVER = '35.240.207.69'
-    FRONTEND_SERVER_DIR = './app'
+    FRONTEND_SERVER_DIR = '/home/app'
   }
   stages {
     stage('Build JS') {
@@ -49,7 +49,7 @@ pipeline {
             remote.identityFile = identityFile
             remote.allowAnyHosts = true
 
-            sshCommand remote: remote, command: "cd $FRONTEND_SERVER_DIR && export FRONTEND_IMAGE=$FRONTEND_IMAGE:$BUILD_ID && docker-compose up -d"
+            sshCommand remote: remote, command: "cd $FRONTEND_SERVER_DIR && export FRONTEND_IMAGE=$FRONTEND_IMAGE:$BUILD_ID && date && cal"
           }
         }
       }

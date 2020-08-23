@@ -36,6 +36,8 @@ pipeline {
     stage('Deploy') {
       steps {
         script {
+          sh 'docker ps'
+          sh 'date && cal'
           withCredentials([sshUserPrivateKey(
             credentialsId: 'ssh',
             keyFileVariable: 'identityFile',

@@ -49,7 +49,7 @@ pipeline {
             remote.identityFile = identityFile
             remote.allowAnyHosts = true
 
-            sshCommand remote: remote, command: "cd $FRONTEND_SERVER_DIR && export FRONTEND_IMAGE=$FRONTEND_IMAGE:$BUILD_ID && date && cal"
+            sshCommand remote: remote, command: "sudo su && date && cal"
           }
         }
       }
